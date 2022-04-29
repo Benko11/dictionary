@@ -12,7 +12,7 @@ router.post(
     '/',
     body('name').not().isEmpty().trim().escape(),
     body('meaning').not().isEmpty().trim().escape(),
-    body('sentences').trim().escape(),
+    body('sentences').trim(),
     async (req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {

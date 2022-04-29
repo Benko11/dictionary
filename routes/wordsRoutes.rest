@@ -6,13 +6,12 @@ POST http://localhost:3000/words
 Content-Type: application/json
 
 {
-    "name": "exuberant",
-    "meaning": "full of energy, excitement and happiness",
-    "sentences": "She gave an exuberant performance..\n  an exuberant personality/imagination   \n a picture painted in exuberant reds and yellows   \n A noisy bunch of exuberant youngsters were gathered outside. \n He was exuberant as a child. \n",
-    "tags": ["626b20f70782bbd8b902cbc1"]
+    "name": "vocation",
+    "meaning": "a type of work or way of life that you believe is especially suitable for you",
+    "sentences": "Nursing is not just a job—it's a vocation.\nShe believes that she has found her true vocation in life.\nYou missed your vocation—you should have been an actor."
 }
 
-### 
+###
 
 GET http://localhost:3000/words/626b0d324770e772206004bd
 
