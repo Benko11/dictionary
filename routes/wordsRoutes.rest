@@ -1,0 +1,21 @@
+GET http://localhost:3000/words
+
+###
+
+POST http://localhost:3000/words
+Content-Type: application/json
+
+{
+    "name": "exuberant",
+    "meaning": "full of energy, excitement and happiness",
+    "sentences": "She gave an exuberant performance..\n  an exuberant personality/imagination   \n a picture painted in exuberant reds and yellows   \n A noisy bunch of exuberant youngsters were gathered outside. \n He was exuberant as a child. \n",
+    "tags": ["626b20f70782bbd8b902cbc1"]
+}
+
+### 
+
+GET http://localhost:3000/words/626b0d324770e772206004bd
+
+###
+
+DELETE http://localhost:3000/words/626b26534c24793e6b589adf
