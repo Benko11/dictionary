@@ -1,4 +1,4 @@
-const URL = 'https://bluom-dictionary.herokuapp.com/';
+const URL = 'https://bluom-dictionary.herokuapp.com';
 
 const wordsEl = document.querySelector('.words');
 const wordItem = document.getElementById('word-item');
