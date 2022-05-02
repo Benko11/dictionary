@@ -6,9 +6,9 @@ POST http://localhost:3000/words
 Content-Type: application/json
 
 {
-    "name": "vocation",
-    "meaning": "a type of work or way of life that you believe is especially suitable for you",
-    "sentences": "Nursing is not just a job—it's a vocation.\nShe believes that she has found her true vocation in life.\nYou missed your vocation—you should have been an actor."
+    "name":"scrupulous",
+    "meaning":"careful about paying attention to every detail",
+    "sentences":"You must be scrupulous about hygiene when you're preparing a baby's feed.\nscrupulous attention to detail"
 }
 
 ###

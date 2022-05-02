@@ -2,7 +2,7 @@ const wordItem = document.getElementById('word-item');
 const wordMeaning = document.getElementById('word-meaning');
 const wordSentence = document.getElementById('word-sentence');
 const wordAll = document.getElementById('word-all');
-const URL = 'https://bluom-dictionary.herokuapp.com';
+const URL = 'http://localhost:3000';
 
 init();
 
