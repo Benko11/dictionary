@@ -1,0 +1,17 @@
+GET http://localhost:3000/users
+
+###
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "name": "John",
+    "lastName": "Doe",
+    "email": "fuck2.you@gmail.com",
+    "gender": "62890d57ae450d7a43050815",
+    "dateOfBirth": "1999-10-12",
+    "password": "maelstrom",
+    "passwordConfirmation": "maelstrom"
+}
+

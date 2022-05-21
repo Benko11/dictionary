@@ -1,0 +1,19 @@
+GET http://localhost:3000/genders
+
+###
+
+POST http://localhost:3000/genders
+Content-Type: application/json
+
+{
+    "name": "non-binary",
+    "pronoun": "they"
+}
+
+###
+
+GET http://localhost:3000/genders/628903ea0f56afee17affa9c
+
+###
+
+DELETE http://localhost:3000/genders/628903ea0f56afee17affa9c
