@@ -1,0 +1,18 @@
+GET http://localhost:3000/tags
+
+###
+
+POST http://localhost:3000/tags
+Content-Type: application/json
+
+{
+    "title": "X&Y"
+}
+
+###
+
+GET http://localhost:3000/tags/6276fee1a38ae86a0bd4c3cf
+
+###
+
+DELETE http://localhost:3000/tags/6276fee1a38ae86a0bd4c3cf
