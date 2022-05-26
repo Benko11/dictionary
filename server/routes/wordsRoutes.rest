@@ -6,7 +6,7 @@ POST http://localhost:3000/words
 Content-Type: application/json
 
 {
-    "name":"scrupulous",
+    "name":"leeway",
     "meaning":"careful about paying attention to every detail",
     "sentences":"You must be scrupulous about hygiene when you're preparing a baby's feed.\nscrupulous attention to detail"
 }

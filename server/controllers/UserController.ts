@@ -47,6 +47,24 @@ const updateRes = asyncHandler(async (req, res) => {});
 
 const deleteRes = asyncHandler(async (req, res) => {});
 
+const authenticate = asyncHandler(async (req, res) => {
+    const { email, password } = req.body;
+
+    const user = await User.findOne({ email });
+    if (user == null || !(await bcrypt.compare(password, user.password))) {
+        res.status(400);
+        throw new Error('Invalid credentials');
+    }
+
+    res.json({
+        _id: user.id,
+        name: user.name,
+        lastName: user.lastName,
+        email: user.email,
+        token: generateToken(user._id),
+    });
+});
+
 function generateToken(id: ObjectId): string {
     if (process.env.JWT_SECRET == null) {
         throw new Error('Could not sign');
@@ -55,4 +73,4 @@ function generateToken(id: ObjectId): string {
     return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' });
 }
 
-export { indexRes, addRes, showRes, updateRes, deleteRes };
+export { indexRes, addRes, showRes, updateRes, deleteRes, authenticate };

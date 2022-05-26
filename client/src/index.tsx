@@ -3,27 +3,28 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Words from './pages/Words';
-import WordDetail from './pages/WordDetail';
-import WordCreate from './pages/WordCreate';
-import NotFound from './pages/NotFound';
-import WordEdit from './pages/WordEdit';
-import Tags from './pages/Tags';
+// import Words from './NUKE/pages/Words';
+// import WordDetail from './NUKE/pages/WordDetail';
+// import WordCreate from './NUKE/pages/WordCreate';
+// import NotFound from './NUKE/pages/NotFound';
+// import WordEdit from './NUKE/pages/WordEdit';
+// import Tags from './NUKE/pages/Tags';
+import { Provider } from 'react-redux';
+import { store } from './app/store';
+// import Login from './public/Login';
+// import Register from './public/Register';
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLDivElement
 );
 root.render(
-    <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<App />}>
-                <Route path="*" element={<NotFound />} />
-                <Route path="words" element={<Words />} />
-                <Route path="words/create" element={<WordCreate />} />
-                <Route path="words/:id" element={<WordDetail />} />
-                <Route path="words/:id/edit" element={<WordEdit />} />
-                <Route path="tags" element={<Tags />} />
-            </Route>
-        </Routes>
-    </BrowserRouter>
+    <React.StrictMode>
+        <Provider store={store}>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<App />}></Route>
+                </Routes>
+            </BrowserRouter>
+        </Provider>
+    </React.StrictMode>
 );

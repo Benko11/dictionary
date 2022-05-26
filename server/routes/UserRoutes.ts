@@ -1,6 +1,6 @@
 import express from 'express';
 import { body, check, CustomValidator } from 'express-validator';
-import { indexRes, addRes } from '../controllers/UserController';
+import { indexRes, addRes, authenticate } from '../controllers/UserController';
 import User from '../models/User';
 
 const router = express.Router();
@@ -31,6 +31,13 @@ router.post(
         .withMessage('Password must be at least 8 characters long'),
     check('passwordConfirmation').isLength({ min: 8 }).custom(passwordsMatch),
     addRes
+);
+
+router.post(
+    '/login',
+    body('email').isEmail(),
+    body('password').not().isEmpty(),
+    authenticate
 );
 
 export default router;

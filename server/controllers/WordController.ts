@@ -3,7 +3,6 @@ import { validationResult } from 'express-validator';
 import Word from '../models/Word';
 
 const indexRes = asyncHandler(async (req, res: any) => {
-    console.log(res.authorizedUser.id);
     const words = await Word.find({
         authors: { $in: [res.authorizedUser.id] },
     });
@@ -31,6 +30,7 @@ const addRes = asyncHandler(async (req, res: any) => {
     const word = new Word({
         name: req.body.name,
         meanings: [{ meaning: req.body.meaning, sentences }],
+        authors: [res.authorizedUser.id],
     });
 
     const saved = await word.save();

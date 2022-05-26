@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/words', wordsRoutes);
 app.use('/tags', tagsRoutes);
-app.use('/', userRoutes);
+app.use('/users', userRoutes);
 app.use('/genders', genderRoutes);
 
 app.use(ErrorMiddleware);

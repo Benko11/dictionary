@@ -16,6 +16,7 @@ router.get('/', authorizeMiddleware, indexRes);
 
 router.post(
     '/',
+    authorizeMiddleware,
     body('name').not().isEmpty().trim().escape(),
     body('meaning').not().isEmpty().trim(),
     body('sentences').trim(),
