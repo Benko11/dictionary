@@ -11,6 +11,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 // import Tags from './NUKE/pages/Tags';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
+import Login from './pages/Login';
+import Register from './pages/Register';
 // import Login from './public/Login';
 // import Register from './public/Register';
 
@@ -22,7 +24,10 @@ root.render(
         <Provider store={store}>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<App />}></Route>
+                    <Route path="/" element={<App />}>
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
+                    </Route>
                 </Routes>
             </BrowserRouter>
         </Provider>

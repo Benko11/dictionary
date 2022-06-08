@@ -5,7 +5,7 @@ import User from '../models/User';
 
 const router = express.Router();
 
-router.get('/users', indexRes);
+router.get('/', indexRes);
 
 const emailExists: CustomValidator = async (value) => {
     const user = await User.findOne({ email: value });

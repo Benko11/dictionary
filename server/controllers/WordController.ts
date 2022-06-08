@@ -31,6 +31,7 @@ const addRes = asyncHandler(async (req, res: any) => {
         name: req.body.name,
         meanings: [{ meaning: req.body.meaning, sentences }],
         authors: [res.authorizedUser.id],
+        media: [req.body.media],
     });
 
     const saved = await word.save();
